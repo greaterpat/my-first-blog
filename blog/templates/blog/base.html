@@ -1,0 +1,44 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Gpat's blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+    </head>
+
+    <style>
+        body{
+            margin: 0;
+        }
+        .django-head{
+            background: rgb(236, 141, 72);
+            height: 100px;
+            margin: 0;
+            font-size: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .django-para{
+            color: aliceblue;
+            padding-left: 10px;
+        }
+        a{
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+
+    <body>
+        <div class="django-head">
+            <h1 class="django-para">Django Girls Blog</h1>
+        </div>
+        
+        <div>
+            {% block content %}
+            {% endblock %}
+        </div>
+
+    </body>
+</html>
